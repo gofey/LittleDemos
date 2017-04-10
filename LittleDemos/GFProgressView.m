@@ -46,6 +46,7 @@
         self.layer.cornerRadius = frame.size.height / 2;
         UIImageView *progressView = [[UIImageView alloc] initWithFrame:CGRectMake(1, 3, frame.size.width - 2, frame.size.height - 6)];
         [self addSubview:progressView];
+        //记录原始总宽度，计算进度时候使用
         _wholeWidth = progressView.width;
         self.progressView = progressView;
         progressView.clipsToBounds = YES;
@@ -169,7 +170,6 @@
         
     }else{
         [self chageFrame];
-        
     }
 }
 
@@ -184,9 +184,7 @@
     self.progressDataImageView.frame = CGRectMake(CGRectGetMaxX(self.progressView.frame), - _progressDataImageView.height - 5, _progressDataImageView.width, _progressDataImageView.height);
     
     self.dataLabel.text = [NSString stringWithFormat:@"%.0f",self.dataTatal * _progress];
-//    NSLog(@"%@",NSStringFromCGRect(self.progressView.frame));
-    
-    
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -126,7 +126,7 @@
 - (void)initPlayer:(CGRect )frame{
     //初始化AVPlayer控制器
     self.playItem = [[AVPlayerItem alloc] initWithURL:self.video_url];
-
+    
     [self addObserverWithPlayerItem:self.playItem];
     self.player = [AVPlayer playerWithPlayerItem:self.playItem];
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
@@ -502,6 +502,7 @@
     }
     else if([keyPath isEqualToString:@"loadedTimeRanges"]){
         //计算缓冲
+        //由于我的项目是直接播放本地视频，所以不需要在线缓冲，如有需要请参考一下其他的博客。我后期也会进行完善 十分抱歉
     }
     else{
         NSLog(@"...");
