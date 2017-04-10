@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  LittleDemos
+//
+//  Created by 厉国辉 on 2017/3/31.
+//  Copyright © 2017年 Xschool. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIImage+CutImage.h"
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
